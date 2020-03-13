@@ -1,43 +1,31 @@
 fun main() {
 
     // Задание 12
-    fun checkYear(year: Int) {
-        if (year % 4 == 0) {
-            println("Год високосный")
+    fun checkYear(year: Int): String {
+        return if (year % 4 == 0) {
+            "Год високосный"
         } else
-            println("Год обычный")
+            "Год обычный"
     }
-
-    checkYear(2000)
-    checkYear(1555)
-    println("-----------------------------------------")
-
 
     // Задание 13
-    fun count(vararg name: String) {
-        val count = name.size
-        println("Число сотрудников: $count")
-    }
-
-    count("Сотрудник1", "Сотрудник2", "Сотрудник3", "Сотрудник4", "Сотрудник5")
-    count("Сотрудник1", "Сотрудник2", "Сотрудник3")
-    println("-----------------------------------------")
+    fun count(vararg name: String): Int = name.size
 
     // Задание 14
     fun getDate(fio: String, position: String) {
-        println("Когда есть фио и должность")
+        println("ФИО: $fio, должность: $position")
     }
 
     fun getDate(fio: String, position: String, age: Int) {
-        println("Когда есть фио, возраст и должность")
+        println("ФИО: $fio, возраст:$age, должность: $position")
     }
 
     fun getDate(fio: String, position: String, maritalStatus: Boolean) {
-        println("Когда есть фио, должность и семейное положение")
+        println("ФИО: $fio, должность: $position, семейное положение: $maritalStatus")
     }
 
     fun getDate(fio: String, position: String, age: Int, maritalStatus: Boolean) {
-        println("Когда есть фио, должность, возраст и семейное положение")
+        println("ФИО: $fio, возраст:$age, должность: $position, семейное положение: $maritalStatus")
     }
 
     getDate("Пертров М.В.", "продавец")

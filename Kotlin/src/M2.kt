@@ -53,8 +53,10 @@ fun main() {
 
     // Задание 9
     val array = arrayOf(arrayOf("Russia", "England", "Spain"), arrayOf("Moscow", "London", "Madrid"), arrayOf("rubles", "euro", "euro"))
-    array.forEach { it ->
-        it.forEach { print("$it ") }
+    (array[0].indices).forEach { i ->
+        for (j in array) {
+            print(j[i] + " ")
+        }
         println()
     }
     println("-----------------------------------------")
